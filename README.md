@@ -1,4 +1,5 @@
 # TipCalc
 
-![image](https://user-images.githubusercontent.com/59288386/189530887-9acdc255-8fdb-4121-a014-a65e35a6b5c0.png | width=100)
+![image](https://user-images.githubusercontent.com/59288386/189531078-fc3214d5-4c7c-4e9d-8e99-6b2f6bd40261.png)
+
 Tip Calculator App with Bill Sharing
