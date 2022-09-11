@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         var totalAmount = tvTotalAmount.text.toString().toDouble()
         var perPersonCost = totalAmount / personCount
 
-        tvPerPersonAmount.text = perPersonCost.toString()
+        tvPerPersonAmount.text = "%.2f".format(perPersonCost)
     }
 
     private fun computeTipAndTotal() {
