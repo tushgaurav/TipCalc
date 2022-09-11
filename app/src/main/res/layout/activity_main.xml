@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tipBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="68dp"
+        android:text="Base"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="24%"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tipBase"
+        app:layout_constraintTop_toBottomOf="@+id/tipBase" />
+
+    <TextView
+        android:id="@+id/tipTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tip"
+        app:layout_constraintEnd_toEndOf="@+id/tipBase"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercentage" />
+
+    <TextView
+        android:id="@+id/tipTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total"
+        app:layout_constraintEnd_toEndOf="@+id/tipBase"
+        app:layout_constraintTop_toBottomOf="@+id/tipTip" />
+
+    <EditText
+        android:id="@+id/editBaseAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:hint="Bill Amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tipBase"
+        app:layout_constraintStart_toEndOf="@+id/tipBase"
+        app:layout_constraintTop_toTopOf="@+id/tipBase" />
+
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="40"
+        app:layout_constraintBottom_toBottomOf="@+id/tipPercentage"
+        app:layout_constraintStart_toStartOf="@+id/editBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tipPercentage"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tipTotal"
+        app:layout_constraintStart_toStartOf="@+id/editBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tipTotal"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="103.11" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tipTip"
+        app:layout_constraintStart_toStartOf="@+id/editBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tipTip"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="19.96" />
+
+    <TextView
+        android:id="@+id/divideMoneyHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="Divide Money"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalAmount"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalAmount"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalAmount" />
+
+    <EditText
+        android:id="@+id/editNumberPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/divideMoney"
+        app:layout_constraintStart_toEndOf="@+id/divideMoney"
+        app:layout_constraintTop_toTopOf="@+id/divideMoney" />
+
+    <TextView
+        android:id="@+id/divideMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:text="Persons"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tipTotal"
+        app:layout_constraintTop_toBottomOf="@+id/tipTotal" />
+
+    <TextView
+        android:id="@+id/tvPerPersonCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDividedAmount"
+        app:layout_constraintStart_toEndOf="@+id/tvDividedAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvDividedAmount"
+        tools:text="69.69" />
+
+    <TextView
+        android:id="@+id/tvDividedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="Pay"
+        app:layout_constraintEnd_toEndOf="@+id/divideMoney"
+        app:layout_constraintTop_toBottomOf="@+id/divideMoney" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
