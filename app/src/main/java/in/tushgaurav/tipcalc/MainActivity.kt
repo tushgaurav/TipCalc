@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun computePerPersonCost() {
-        if (editPersonCount.text.isEmpty()) {
+        if (editPersonCount.text.isEmpty() || editBaseAmount.text.isEmpty()) {
             tvPerPersonAmount.text = tvTotalAmount.text.toString()
             return }
         var personCount = editPersonCount.text.toString().toInt()
